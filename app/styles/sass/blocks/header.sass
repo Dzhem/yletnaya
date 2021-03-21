@@ -1,0 +1,48 @@
+.logo
+	&__link
+		display: block
+	&__img
+		margin: 0 auto
+		display: block
+
+.input-group
+	position: relative
+	
+.input-search
+	width: 100%
+
+.btn-search
+	background-color: transparent
+	border: none
+	position: absolute
+	right: 0
+
+.menu
+	list-style: none
+	margin: 0
+	padding: 0
+	display: flex
+	justify-content: space-evenly
+	&__item
+		position: relative
+		flex-grow: 1
+	&__item + &__item:after
+		position: absolute;
+		width: 3px;
+		height: 33px;
+		background: url(../images/dist/menu_sep.png) right 0 repeat-y;
+		content: '';
+		left: -3px;
+		top: 50%;
+		transform: translateY(-50%);
+	&__link
+		display: block
+		padding: 15px
+		text-decoration: none
+		color: $accent
+		transition: 0.2s
+		text-align: center
+		&:hover
+			color: $hoverlink
+			text-decoration: none
+	
