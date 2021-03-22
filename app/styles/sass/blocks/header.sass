@@ -1,9 +1,11 @@
 header
 	border-bottom: 1px solid #b2b2b2
 	position: relative
-	padding-bottom: 5px
-@include media-breakpoint-up(sm)
-	header
+	padding-bottom: 10px
+	position: sticky
+	top: 0
+	background-color: $bgcolor
+	@include media-breakpoint-up(sm)
 		padding-bottom: 0
 
 .logo
@@ -41,11 +43,12 @@ header
 	display: none
 	position: absolute;
 	top: 100%;
-@include media-breakpoint-up(md)
-	.navigation
+	background-color: $bgcolor
+	border-bottom: 1px solid #b2b2b2
+	@include media-breakpoint-up(md)
 		display: block
 		position: relative
-
+		border: none
 
 .menu
 	list-style: none
@@ -56,6 +59,9 @@ header
 	&__item
 		position: relative
 		flex-grow: 1
+		display: flex
+		align-items: center
+		justify-content: center
 	&__item + &__item:after
 		position: absolute;
 		width: 3px;
@@ -86,11 +92,9 @@ header
 	position: absolute
 	top: 10px
 	right: 15px
-@include media-breakpoint-up(sm)
-	.menu-btn
+	@include media-breakpoint-up(sm)
 		top: 50%
 		transform: translateY(-50%)
-@include media-breakpoint-up(md)
-	.menu-btn
+	@include media-breakpoint-up(md)
 		display: none
 	
