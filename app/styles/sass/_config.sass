@@ -64,8 +64,15 @@ body
 	background-size: contain
 	background-color: $bgcolor
 
+a
+	text-decoration: none
+	transition: color 0.1s ease-in-out, background 0.1s ease-in-out, border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out
+	&:hover, &:focus, &:active
+		outline: none
+		text-decoration: none
+
 .container
 	max-width: 1200px
 
 .show
-    display: block!important
+	display: block!important
