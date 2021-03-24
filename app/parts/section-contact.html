@@ -1,13 +1,13 @@
 <section class="contacts container">
     <h2 class="page-header">Контакты</h2>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-6">
+        <div class="col-12 col-lg-6">
             <p>Улётная точка - воздушные шары на все случаи жизни!<br> Оформление магазинов и праздников,
                 создание фотозон, доставка.<br> Здесь вы найдете каталог наших товаров с фото, подробным описанием и
                 актуальными ценами.</p>
             <p><i class="icon-phone"></i> <b>Принимаем заказы по телефонам, WA с 9.00 до 21.00 часа, без
                     выходных: <br></b> <a href="tel:+79176425392">+7-917-642-53-92</a><br>
-                    <a href="tel:+79851704817">+7-985-170-48-17</a>
+                <a href="tel:+79851704817">+7-985-170-48-17</a>
             </p>
             <p><i class="icon-mail"></i> <b>ОТЗЫВЫ, замечания, предложения, жалобы присылайте на</b>
                 <a href="mailto:yletnayatochka@gmail.com" rel="nofollow" target="_blank">yletnayatochka@gmail.com</a>
@@ -18,24 +18,63 @@
             <p><i class="icon-location"></i> <b>Доставка и Выезд:</b> г.Волгоград, ежедневно по
                 предварительному согласованию</p>
             <p><i class="icon-location"></i> <b>Доставка:</b> г. Москва, МО не далее 20км от МКАД</p>
+            <div id="wrapMap">
+                <div style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/38/volgograd/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Волгоград</a><a
+                        href="https://yandex.ru/maps/38/volgograd/?from=api-maps&ll=44.472819%2C48.724417&origin=jsapi_2_0&pt=44.472949%2C48.724496~44.472949%2C48.724496~44.472949%2C48.724496&utm_medium=mapframe&utm_source=maps&z=18"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — поиск мест и
+                        адресов, городской транспорт</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCUUiSTBSB" width="100%" height="400" frameborder="1"
+                        allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+            </div>
+            <script>
+                // создаём элемент <div>, который будем перемещать вместе с указателем мыши пользователя
+                const mapTitle = document.createElement('div');
+                const mapFrame = document.querySelector('#wrapMap').querySelector('iframe');
 
-            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/38/volgograd/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Волгоград</a><a href="https://yandex.ru/maps/38/volgograd/?from=api-maps&ll=44.472819%2C48.724417&origin=jsapi_2_0&pt=44.472949%2C48.724496~44.472949%2C48.724496~44.472949%2C48.724496&utm_medium=mapframe&utm_source=maps&z=18" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — поиск мест и адресов, городской транспорт</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUUiSTBSB" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                mapFrame.style.pointerEvents = 'none';
+                mapTitle.className = 'mapTitle';
+                // вписываем нужный нам текст внутрь элемента
+                mapTitle.textContent = 'Для активации карты нажмите по ней';
+                // добавляем элемент с подсказкой последним элементов внутрь нашего <div> с id wrapMap
+                wrapMap.appendChild(mapTitle);
+                // по клику на карту
+                wrapMap.onclick = function() {
+                    // убираем атрибут "style", в котором прописано свойство "pointer-events"
+                    mapFrame.style.pointerEvents = 'auto';
+                    // удаляем элемент с интерактивной подсказкой
+                    mapTitle.remove();
+                }
+                // по движению мыши в области карты
+                wrapMap.onmousemove = function(event) {
+                    // показываем подсказку
+                    mapTitle.style.display = 'block';
+                    // двигаем подсказку по области карты вместе с мышкой пользователя
+                    if(event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
+                    if(event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
+                }
+                // при уходе указателя мыши с области карты
+                wrapMap.onmouseleave = function() {
+                    // прячем подсказку
+                    mapTitle.style.display = 'none';
+                }
+            </script>
 
         </div>
-        <div class="col-12 col-sm-12 col-md-6">
+        <div class="col-12 col-lg-6">
             <form class="form fos ajax_form" action="https://yletnaya.ru/" method="post"><input type="hidden"
                     name="nospam:blank" value="">
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback icon-user">
                     <label for="name"> Ваше имя*: </label>
                     <input id="name" type="text" class="form-control" name="name" value="" placeholder="Ваше имя"
                         required="">
-                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback icon-mail-alt">
                     <label for="contact"> Как с Вами связаться*: </label>
                     <input id="contact" type="text" class="form-control" name="contact" value=""
                         placeholder="Ваша почта, телефон" required="">
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
                     <label for="text"> Cообщениe*: </label>
