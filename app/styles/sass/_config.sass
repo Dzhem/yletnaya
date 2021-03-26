@@ -57,6 +57,7 @@ body
 	line-height: $lineheight
 	color: $textcolor
 	min-width: 320px
+	min-height: 100vh
 	position: relative
 	overflow-x: hidden
 	background: url(../images/dist/bg2.png) no-repeat
@@ -64,8 +65,11 @@ body
 	background-attachment: scroll
 	background-size: contain
 	background-color: $bgcolor
+	display: flex
+	flex-direction: column
 
 a
+	color: $accent
 	text-decoration: none
 	transition: color 0.1s ease-in-out, background 0.1s ease-in-out, border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out
 	&:hover, &:focus, &:active
@@ -77,3 +81,7 @@ a
 
 .show
 	display: block!important
+
+.content
+	padding: 10px 0 30px
+	flex-grow: 1
