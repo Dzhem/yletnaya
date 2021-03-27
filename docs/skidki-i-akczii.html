@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Контакты | Улётная точка</title>
+	<title>Скидки | Улётная точка</title>
 	<meta name="description" content="Магазин Гелиевых Шаров | Улётная точка">
 
 	<meta name="viewport" content="width=device-width">
@@ -64,87 +64,62 @@
         </ol>
     </div>
 </div>
-    <section class="contacts container">
-    <h1 class="page-title">Контакты</h1>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <p><i class="icon-phone"></i> <b>Принимаем заказы по телефонам, WA с 9.00 до 21.00 часа, без
-                    выходных: <br></b> <a href="tel:+79176425392">+7-917-642-53-92</a><br>
-                <a href="tel:+79851704817">+7-985-170-48-17</a>
-            </p>
-            <p><i class="icon-mail"></i> <b>ОТЗЫВЫ, замечания, предложения, жалобы присылайте на</b>
-                <a href="mailto:yletnayatochka@gmail.com" rel="nofollow" target="_blank">yletnayatochka@gmail.com</a>
-            </p>
-            <p><i class="icon-instagram"></i> <b>Большой выбор готовых решений, Ответ на Директ с 9.00 до 21.00
-                    часа в нашем:</b> <a target="_blank" href="https://www.instagram.com/yletnayatochka/">Instagram</a>
-            </p>
-            <p><i class="icon-location"></i> <b>Доставка и Выезд:</b> г.Волгоград, ежедневно по
-                предварительному согласованию</p>
-            <p><i class="icon-location"></i> <b>Доставка:</b> г. Москва, МО не далее 20км от МКАД</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="page-title">Скидки</h1>
 
-            <div id="wrapMap">
-                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/shariki_uletnaya_tochka/63571621080/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Шарики Улетная точка</a><a href="https://yandex.ru/maps/38/volgograd/category/goods_for_holiday/184108317/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Товары для праздника в Волгограде</a><a href="https://yandex.ru/maps/38/volgograd/category/event_planning_agency/184108329/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Праздничное агентство в Волгограде</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUUuFXMcA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+                <p>Скидки распространяются на все шары и композиции, кроме шаров из раздела « Акции и Распродажи».<br>
+                    Так же скидки не распространяются на Товары для праздника и на Доставку.</p>
+
+                <table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+                    <tbody>
+                        <tr>
+                            <td><strong><span style="font-size:14px;"><span
+                                            style="font-family:arial,helvetica,sans-serif;">Клиент</span></span></strong>
+                            </td>
+                            <td style="text-align: center;"><strong><span style="font-size:14px;"><span
+                                            style="font-family:arial,helvetica,sans-serif;">Сумма заказа<br>
+                                            до 6999 руб</span></span></strong></td>
+                            <td style="text-align: center;"><strong><span style="font-size:14px;"><span
+                                            style="font-family:arial,helvetica,sans-serif;">Сумма заказа<br>
+                                            7000 руб и выше</span></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td>Новый Клиент</td>
+                            <td style="text-align: center;">0%</td>
+                            <td style="text-align: center;">5%</td>
+                        </tr>
+                        <tr>
+                            <td>Держатель карты</td>
+                            <td style="text-align: center;">10%</td>
+                            <td style="text-align: center;">15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Карта клиента выдается при первом заказе, скидка действует со 2-го заказа. Если вы потеряли или не
+                    взяли с собой карту клиента, скидка посчитается по номеру телефона.<br>
+                    <br>
+                    Самостоятельно Вы можете забрать предварительно оформленный заказ из нашего пункта&nbsp;выдачи по
+                    адресу<br>
+                    г. Волгоград, Бульвар 30-летия Победы, д.84<br>
+                    <br>
+                    Для Самовывоза Обязательно оформите предварительный заказ по телефону или на сайте, чтобы мы его
+                    подготовили,<br>
+                    и сообщите желаемое время приезда, чтобы мы точно были на месте.<br>
+                    &nbsp;</p>
+
+                <p>&nbsp;</p>
+
+                <div class="image-page">
+
+                </div>
+
             </div>
-
-            <script>
-                // создаём элемент <div>, который будем перемещать вместе с указателем мыши пользователя
-                const mapTitle = document.createElement('div');
-                const mapFrame = document.querySelector('#wrapMap').querySelector('iframe');
-
-                mapFrame.style.pointerEvents = 'none';
-                mapTitle.className = 'mapTitle';
-                // вписываем нужный нам текст внутрь элемента
-                mapTitle.textContent = 'Для активации карты нажмите по ней';
-                // добавляем элемент с подсказкой последним элементов внутрь нашего <div> с id wrapMap
-                wrapMap.appendChild(mapTitle);
-                // по клику на карту
-                wrapMap.onclick = function() {
-                    // убираем атрибут "style", в котором прописано свойство "pointer-events"
-                    mapFrame.style.pointerEvents = 'auto';
-                    // удаляем элемент с интерактивной подсказкой
-                    mapTitle.remove();
-                }
-                // по движению мыши в области карты
-                wrapMap.onmousemove = function(event) {
-                    // показываем подсказку
-                    mapTitle.style.display = 'block';
-                    // двигаем подсказку по области карты вместе с мышкой пользователя
-                    if(event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
-                    if(event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
-                }
-                // при уходе указателя мыши с области карты
-                wrapMap.onmouseleave = function() {
-                    // прячем подсказку
-                    mapTitle.style.display = 'none';
-                }
-            </script>
-
-        </div>
-        <div class="col-12 col-lg-6">
-            <form class="form fos ajax_form" action="https://yletnaya.ru/" method="post"><input type="hidden"
-                    name="nospam:blank" value="">
-                <div class="form-group has-feedback icon-user">
-                    <label for="name"> Ваше имя*: </label>
-                    <input id="name" type="text" class="form-control" name="name" value="" placeholder="Ваше имя"
-                        required="">
-                </div>
-                <div class="form-group has-feedback icon-mail-alt">
-                    <label for="contact"> Как с Вами связаться*: </label>
-                    <input id="contact" type="text" class="form-control" name="contact" value=""
-                        placeholder="Ваша почта, телефон" required="">
-                </div>
-                <div class="form-group has-feedback">
-                    <label for="text"> Cообщениe*: </label>
-                    <textarea id="text" name="text" class="form-control" rows="6" cols="55" required=""></textarea>
-                </div>
-                <p>* Поля обязательные для заполнения</p>
-                <div class="form-buttons"><input type="submit" value="Отправить" class="btn btn-defalut"></div>
-
-                <input type="hidden" name="af_action" value="b9b005c6b08ea11e11c484992b87dd03">
-            </form>
         </div>
     </div>
-</section>
 </div>
 
 <footer class="footer-main">
