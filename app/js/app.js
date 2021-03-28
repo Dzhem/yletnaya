@@ -3,6 +3,8 @@ import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
 
+import goodshare from 'goodshare.js';
+
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
 
