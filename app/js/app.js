@@ -4,6 +4,9 @@ window.jQuery = $;
 window.$ = $;
 
 import goodshare from 'goodshare.js';
+// import AjaxForm from 'ajax-form';
+import magnificPopup from 'magnific-popup';
+import slick from 'slick-slider';
 
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
@@ -33,5 +36,73 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    $('.zoom').magnificPopup({
+        type: 'image',
+        image: {
+            titleSrc: 'title'
+        }
+    });
+    $('.zoom-gal').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        image: {
+            titleSrc: 'title'
+        }
+    });
+    $('.zoom-gal-mob').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        image: {
+            titleSrc: 'title'
+        }
+    });
+    $('.modal-window').magnificPopup({
+        type: 'inline'
+    });
+    $.extend(true, $.magnificPopup.defaults, { // перевод для magnific-popup
+        tClose: 'Закрыть (Esc)', // Alt text on close button
+        tLoading: 'Загрузка...', // Text that is displayed during loading. Can contain %curr% and %total% keys
+        gallery: {
+            tPrev: 'Предыдущий', // Alt text on left arrow
+            tNext: 'Следующий', // Alt text on right arrow
+            tCounter: '%curr% из %total%' // Markup for "1 of 7" counter
+        },
+        image: {
+            tError: 'Не удалось загрузить <a href="%url%">изображение</a>.' // Error message when image could not be loaded
+        },
+        ajax: {
+            tError: 'Не удалось загрузить <a href="%url%">содержимое</a>.' // Error message when ajax request failed
+        }
+    });
+
+    var sliderWrapper = $('.slider-wrapper');
+    sliderWrapper.removeClass('loading');
+    if (sliderWrapper.data('adaptive') == '1') {
+        $(window).resize(function () {
+            var sliderHeight = parseInt(sliderWrapper.data('height')) * $(sliderWrapper).width() / parseInt(sliderWrapper.data('width'));
+            sliderWrapper.css('height', sliderHeight + 'px');
+        }).trigger('resize');
+    }
+
+    $('#touch-menu').on('click', function (e) {
+        e.preventDefault();
+        $('.menu-mobile').slideToggle();
+    });
+
+    $('.slick-slider').show().slick({
+        autoplay: true,
+        speed: 800,
+        autoplaySpeed: 5000,
+        fade: true,
+        arrows: true,
+        dots: false,
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+    });
 
 });

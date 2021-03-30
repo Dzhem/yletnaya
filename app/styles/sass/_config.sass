@@ -19,6 +19,8 @@ $gutter: $grid-gutter-width
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'node_modules/magnific-popup/dist/magnific-popup'
+@import 'node_modules/slick-slider/slick/slick.scss'
 
 // FONTS LOAD SECTION
 
@@ -82,6 +84,9 @@ a
 .show
 	display: block!important
 
+.hidden
+	display: none!important
+
 .content
 	padding: 10px 0 30px
 	flex-grow: 1
@@ -140,3 +145,20 @@ table > tbody > tr:nth-of-type(even)
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 	color: #333
 	font-weight: 400
+
+a.btn, button, input[type=submit], button.btn, input[type=submit].btn
+	border-radius: 2px
+	background: #9400d3
+	color: #fff
+	border: none
+	padding: 10px 14px
+	font-size: 14px
+	line-height: 16px
+	font-weight: 400
+	white-space: normal
+	transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out
+
+.btn
+	display: inline-block
+
+
