@@ -8,6 +8,9 @@
 			margin: 0
 			list-style: none
 			display: flex
+			justify-content: center
+			@include media-breakpoint-up(lg)
+				justify-content: start
 			li
 				vertical-align: middle
 				padding-right: 40px
@@ -35,7 +38,7 @@
 					color: $accent
 		.social-block
 			text-align: center
-			@include media-breakpoint-up(md)
+			@include media-breakpoint-up(lg)
 				text-align: right
 			.social-buttons-item
 				display: inline-block
