@@ -4,12 +4,12 @@ window.jQuery = $;
 window.$ = $;
 
 import goodshare from 'goodshare.js';
-// import AjaxForm from 'ajax-form';
-import magnificPopup from 'magnific-popup';
-import slick from 'slick-slider';
 
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
+require('~/app/libs/magnific-popup/jquery.magnific-popup.min.js');
+require('~/app/libs/slick/slick.js');
+// require('~/app/libs/ajax-form/ajax-form.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 

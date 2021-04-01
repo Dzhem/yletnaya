@@ -8,7 +8,6 @@
 	"devDependencies": {
 		"@babel/core": "^7.13.10",
 		"@babel/preset-env": "^7.13.10",
-		"ajax-form": "^2.1.4",
 		"babel-loader": "^8.2.2",
 		"babel-plugin-module-resolver": "^4.1.0",
 		"babel-plugin-root-import": "^6.6.0",
@@ -30,11 +29,10 @@
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-stylus": "^2.7.0",
 		"jquery": "^3.6.0",
-		"magnific-popup": "^1.1.0",
-		"slick-slider": "^1.8.2",
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
-		"goodshare.js": "^6.1.5"
+		"goodshare.js": "^6.1.5",
+		"magnific-popup": "^1.1.0"
 	}
 }
