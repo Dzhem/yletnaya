@@ -88,11 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).trigger('resize');
     }
 
-    $('#touch-menu').on('click', function (e) {
-        e.preventDefault();
-        $('.menu-mobile').slideToggle();
-    });
-
     $('.slick-slider').show().slick({
         autoplay: true,
         speed: 800,
