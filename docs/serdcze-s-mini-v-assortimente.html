@@ -31,7 +31,11 @@
         <div class="row align-items-center">
             <div class="logo col-12 col-sm-4 col-md-3">
                 <a class="logo__link" href="index.html">
-                    <img class="logo__img" src="images/dist/logo-dlya-sajta-v-ugol5.png" alt="Логотип сайта">
+                    <picture class="logo__img">
+                        <source media="(max-width: 768px)" srcset="images/dist/logo-mobile@1.png">
+                        <source media="(max-width: 768px)" srcset="images/dist/logo-mobile@2.png 2x">
+                        <img class="logo__img" src="images/dist/logo-dlya-sajta-v-ugol5.png" srcset="images/dist/logo-dlya-sajta-v-ugol5@2.png 2x" alt="Логотип сайта">
+                    </picture>
                 </a>
             </div>
             <div class="search col-12 col-sm-7 col-md-3">

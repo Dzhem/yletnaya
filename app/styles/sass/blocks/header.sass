@@ -23,8 +23,11 @@ header
 	&__link
 		display: block
 	&__img
-		margin: 5px auto
+		margin: 10px auto
 		display: block
+		width: 80%
+		@include media-breakpoint-up(sm)
+			width: initial
 
 .input-group
 	position: relative
